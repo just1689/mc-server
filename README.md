@@ -14,7 +14,7 @@ docker volume create mc-vol
 docker service create --name mc --publish  25565:25565 --mount type=volume,source=mc-vol,destination=/mc just1689/mc-server:latest
 ```
 
-## Building yourself
+## Manually create docker container
 
 ### Pre-requisites
 - Install Git. 
@@ -29,5 +29,11 @@ docker service create --name mc --publish  25565:25565 --mount type=volume,sourc
 
 ### Add plugs 
 - `cd mc-server/container/mc`
--  
+-  Create directory called plugins
+- Put plugs there
+
+### Create container image
+- `cd mc-server/container/`
+- `docker build -t mydockerhubname/myreponame:test .`
+
 
