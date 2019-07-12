@@ -16,8 +16,18 @@ docker service create --name mc --publish  25565:25565 --mount type=volume,sourc
 
 ## Building yourself
 
+### Pre-requisites
+- Install Git. 
+- Install JDK8, make sure java is in path. 
+- Install maven, check maven is in path.
+
+### Build spigot
 - Clone the repo
 - `cd mc-server/bt`
-- Build Spigot 1.14.3
-- `java -jar BuildTools.jar --rev 1.14.3`
- 
+- Build Spigot 1.14.3 `java -jar BuildTools.jar --rev 1.14.3`
+- `mv spigot-1.14.3.jar ../container/mc`
+
+### Initialize the server
+- `cd mc-server/container/mc`
+-  
+
