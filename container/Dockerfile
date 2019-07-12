@@ -1,4 +1,4 @@
-FROM openjdk:8 as builder
+FROM adoptopenjdk/openjdk12:x86_64-debian-jre-12.0.1_12 as builder
 
 WORKDIR /
 COPY mc /mc
