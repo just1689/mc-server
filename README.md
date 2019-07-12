@@ -2,7 +2,7 @@
 
 The idea here is to spin up a Minecraft server using Spigot and MCMMO in Docker swarm. This will give you a server you can play on with friends and it will auto restart. It also ensures you can move it / back it up.
 
-## Setup
+## Deploy existing container
 - Install Docker
 - Init the swarm `docker swarm init`
 - Create the volumes
@@ -14,3 +14,10 @@ docker volume create mc-vol
 docker service create --name mc --publish  25565:25565 --mount type=volume,source=mc-vol,destination=/mc just1689/mc-server:latest
 ```
 
+## Building yourself
+
+- Clone the repo
+- `cd mc-server/bt`
+- Build Spigot 1.14.3
+- `java -jar BuildTools.jar --rev 1.14.3`
+ 
