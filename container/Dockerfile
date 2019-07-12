@@ -1,8 +1,12 @@
-FROM openjdk:8
+FROM openjdk:8 as builder
 
 WORKDIR /
-RUN mkdir mc
+COPY mc /mc
+
 WORKDIR /mc
-COPY . /mc
+RUN ls -la
+
+FROM builder as runner
+COPY run.sh /mc
 
 ENTRYPOINT ["sh", "/mc/run.sh"]
