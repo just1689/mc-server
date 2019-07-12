@@ -11,6 +11,6 @@ docker volume create mc-vol
 ```
 - Create the service
 ```bash
-docker service create --name mc --publish  25565:25565 --mount type=volume,source=mc-vol,destination=/mc just1689/mc-server:2
+docker service create --name mc --publish  25565:25565 --mount type=volume,source=mc-vol,destination=/mc just1689/mc-server:latest
 ```
 
