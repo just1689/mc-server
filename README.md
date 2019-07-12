@@ -27,7 +27,7 @@ docker service create --name mc --publish  25565:25565 --mount type=volume,sourc
 - Build Spigot 1.14.3 `java -jar BuildTools.jar --rev 1.14.3`
 - `mv spigot-1.14.3.jar ../container/mc`
 
-### Initialize the server
+### Add plugs 
 - `cd mc-server/container/mc`
 -  
 
